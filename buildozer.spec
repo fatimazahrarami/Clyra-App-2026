@@ -1,4 +1,5 @@
 [app]
+icon.filename = %(source.dir)s/icon.png
 title = Clyra
 package.name = clyra
 package.domain = org.untold9
