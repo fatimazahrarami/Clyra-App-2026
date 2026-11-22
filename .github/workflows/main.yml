@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+
     container:
       image: kivy/buildozer:latest
 
@@ -14,8 +15,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check project files
+        run: |
+          ls -la
+          test -f main.py
+          test -f buildozer.spec
+          test -f icon.png
+
       - name: Build APK
-        run: yes | buildozer android debug
+        run: yes | buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
