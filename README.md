@@ -1,1 +1,2 @@
-# Clyra-App-2026
+# Clyra
+Finance Calculator  
